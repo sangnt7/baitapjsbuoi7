@@ -1,4 +1,5 @@
 // =============================Khai báo biến====================
+//=======Mảng 1======
 var numList = [];
 var tongSoDuong = 0;
 var countSoDuong = 0;
@@ -6,6 +7,7 @@ var numMin;
 var numListDuong = [];
 var numDuongMin;
 var numLastChan;
+//=======Mảng 2=======
 var numList2 = [];
 var numListSoNguyen = [];
 var countSoAm = 0;
