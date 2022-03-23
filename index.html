@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header">Nhập vào các phần tử mảng</div>
+                <div class="card-body">
+                    <input id="txtNum" type="text" placeholder="Nhập vào các phần tử của mảnng">
+                    <div class="alert alert-primary">
+                        Chuỗi của bạn là: <strong id="chuoi"></strong>.
+                    </div>
+                    <button id="btn-Nhap" class="btn btn-primary">Nhập</button>
+                    <br>
+                    <button id="btn-Xoa" class="btn btn-primary" style="margin-top: 10px;">Xóa Mảng</button>
+                </div>
+                <div class="card-footer">
+                    <button id="btn-TinhTongSoDuong" class="btn btn-primary">Tính Tổng Số Dương</button>
+                    <div class="alert alert-primary">
+                        Tổng các số dương trong mảng là: <strong id="tongSoDuong"></strong>.
+                    </div>
+                    <button id="btn-DemSoDuong" class="btn btn-primary">Đếm số Dương</button>
+                    <div class="alert alert-primary">
+                        Trong mảng có <strong id="countSoDuong"></strong> số dương.
+                    </div>
+                    <button id="btn-TimSoNho" class="btn btn-primary">Tìm số nhỏ nhất</button>
+                    <div class="alert alert-primary">
+                        Số nhỏ nhất trong mảng là: <strong id="soMin"></strong>.
+                    </div>
+                    <button id="btn-TimSoDuongNho" class="btn btn-primary">Tìm số nhỏ nhất</button>
+                    <div class="alert alert-primary">
+                        Số Dương nhỏ nhất trong mảng là: <strong id="soMinDuong"></strong>.
+                    </div>
+                    <button id="btn-TimLastChan" class="btn btn-primary">Số Chẵn Cuối Cùng</button>
+                    <div class="alert alert-primary">
+                        Số Chẵn Cuối cùng trong mảng là: <strong id="soMinDuong"></strong>.
+                    </div>
+                    <div>
+                        <input id="vitri1" placeholder="" type="text">
+                        <input id="vitri2" placeholder="" type="text">
+                        <button id="btn-DoiViTri" class="btn btn-primary">Đổi vị Trí</button>
+                        <div class="alert alert-primary">
+                            Chuỗi mới của bạn là: <strong id="chuoiMoi"></strong>.
+                        </div>
+                    </div>
+                    <div>
+                        <button id="btn-SapXep" class="btn btn-primary">Sắp Xếp</button>
+                        <div class="alert alert-primary">
+                            Chuỗi được sắp xếp là: <strong id="sapXep"></strong>.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <div style="margin-top: 20px;" class="card">
+                <div class="card-header">Nhập vào mảng số Thực</div>
+                <div class="card-body">
+                    <input style="width: 100%;" id="txtNum2" type="text" placeholder="Nhập vào các phần tử của mảnng">
+                    <div class="alert alert-primary">
+                        Chuỗi của bạn là: <strong id="chuoi2"></strong>.
+                    </div>
+                    <button id="btn-Nhap2" class="btn btn-primary">Nhập</button>
+                    <br>
+                    <button id="btn-Xoa2" class="btn btn-primary" style="margin-top: 10px;">Xóa Mảng</button>
+                </div>
+                <div class="card-footer">
+                    <button id="btn-TimSoNguyen" class="btn btn-primary">TÌM SỐ NGUYÊN</button>
+                    <div class="alert alert-primary">
+                        Các số nguyên trong mảng là: <strong id="soNguyen"></strong>.
+                    </div>
+                    <button id="btn-SoSanh" class="btn btn-primary">So Sánh Số Âm và Số Dương</button>
+                    <div class="alert alert-primary">
+                        <strong id="soSanh"></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
