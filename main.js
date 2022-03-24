@@ -13,6 +13,7 @@ var numListSoNguyen = [];
 var countSoAm = 0;
 var countSoDuong = 0;
 var chenhLech = 0;
+var nguyenToDau = -1;
 
 //====================================== Sự Kiện===========================
 //Nhập Mảng
@@ -29,6 +30,7 @@ document.getElementById("btn-Xoa").onclick = function () {
     numMin = null;
     numListDuong = [];
     numDuongMin = null;
+    nguyenToDau = -1;
     document.getElementById("chuoi").innerHTML = numList;
 }
 //Tính Tổng số Dương
@@ -64,7 +66,7 @@ document.getElementById("btn-TimLastChan").onclick = function () {
     // Tìm số chẵn cuối cùng
     numLastChan = -1;
     timLastChan();
-    console.log(numLastChan);
+    document.getElementById("soChanCuoi").innerHTML = numLastChan;
 }
 // Đổi vị Trí
 document.getElementById("btn-DoiViTri").onclick = function () {
@@ -73,15 +75,28 @@ document.getElementById("btn-DoiViTri").onclick = function () {
     doiVitri(viTri1, viTri2);
     document.getElementById("chuoiMoi").innerHTML = numList;
 }
+// Tìm Số Nguyên tố đầu tiên
+document.getElementById("btn-TimNguyenTo").onclick = function () {
+    timSoNguyenToDau();
+    document.getElementById("nguyenTo1").innerHTML = nguyenToDau;
+}
 // Sắp xếp tăng dần
 document.getElementById("btn-SapXep").onclick = function () {
     sapViTri();
     document.getElementById("sapXep").innerHTML = numList;
 }
-//=========================================== MẢNG SỐ THỰC ==========================================
+//=========================================== MẢNG SỐ THỰC ============================================
 document.getElementById("btn-Nhap2").onclick = function () {
     var num2 = document.getElementById("txtNum2").value * 1;
     numList2.push(num2);
+    document.getElementById("chuoi2").innerHTML = numList2;
+}
+document.getElementById("btn-Xoa2").onclick = function(){
+    numList2 = [];
+    numListSoNguyen = [];
+    countSoAm = 0;
+    countSoDuong = 0;
+    chenhLech = 0;
     document.getElementById("chuoi2").innerHTML = numList2;
 }
 document.getElementById("btn-TimSoNguyen").onclick = function () {
@@ -102,8 +117,8 @@ document.getElementById("btn-SoSanh").onclick = function () {
         content = "Trong mảng có Số Âm nhiều hơn Số Dương " + chenhLech + " số.";
     } else {
         content = "Trong mảng có sô Dương bằng số Âm";
-   }
-   document.getElementById("soSanh").innerHTML = content;
+    }
+    document.getElementById("soSanh").innerHTML = content;
 }
 //=========================================== HÀM ====================================================
 // Hàm Tính tổng số Dương
@@ -176,6 +191,37 @@ function sapViTri() {
         }
     }
 }
+// Hàm tìm số Nguyên Tố Đầu
+function timSoNguyenToDau() {
+    for (var i = 0; i < numList.length; i++) {
+        var check = timSoNguyenTo(numList[i]);
+        if (check){
+            nguyenToDau = numList[i];
+            break;
+        }
+    }
+}
+//tìm số Nguyên tố
+function timSoNguyenTo(number) {
+    var check;
+    if (number < 2) {
+        check = false
+    } else if (number === 2) {
+        check = true
+    } else {
+        for (var i = 2; i < number; i++ ){
+            if( number % i === 0 ){
+                check = false;
+                break;
+            } else{
+                check = true;
+                continue;
+            }
+        }
+    }
+    return check;   
+}
+
 // Hàm tìm số Nguyên
 function mangSoNguyen() {
     for (var i = 0; i < numList2.length; i++) {
